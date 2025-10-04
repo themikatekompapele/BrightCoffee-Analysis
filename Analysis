@@ -45,6 +45,24 @@ WHERE transaction_date>'2023-05-01'
 GROUP BY product_category, store_location, transaction_date, transaction_time
 ORDER BY revenue DESC;
 
+to visualise revenue per month, per store, per category
+
+select transaction_date,
+       year(transaction_date) AS Year,
+       month(transaction_date AS Month,
+       monthname(transaction_date) AS month_name,
+       dayname (transaction_date) AS day_name,
+       store_location,
+       sum(transaction_qty*unit_price) AS revenue
+from shopanalysis
+group by all;
+
+
+
+
+
+
+
 
 
 
