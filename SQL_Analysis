@@ -1,33 +1,33 @@
 Columns for Bright Coffee Analysis transaction_id	transaction_date	transaction_time	transaction_qty	store_id	store_location	product_id	unit_price	product_category	product_type	product_detail		
 
-to show us name of different stores/locations
+--Query 1: to show us name of different stores/locations
 select distinct store location, store_id
 from shopanalysis;
 
-to calculate the number of coffee shops
+--Query 2: to calculate the number of coffee shops
 select count(distict store_id) AS number_of_shops
 from shopanalysis;
 
-calculate revenue by store location
+--Query 3: calculate revenue by store location
 select store_location,
      SUM(unit_price*transanction_qty) as revenue
 from shopanalysis
 GROUP BY store_location;
 
-what time does the store open
+--Query 4: what time does the store open
 select min(transaction_time)  AS opening_time
 from shopanalysis;
 
-first date of transactions per store
+--Query 5: first date of transactions per store
 select min(transaction_date) AS first_day, store_location
 from shopanalysis
 grou by store location
 
-what time does the store close
+--Query 6: what time does the store close
 select max(transaction_time) AS closing_time
 from shopanalysis;
 
-to calculate revenue per product category at different times of the day
+Query 7: to calculate revenue per product category at different times of the day
 
 select product_category,
        SUM(transaction_qty*unit_price) AS revenue,
@@ -45,7 +45,7 @@ WHERE transaction_date>'2023-05-01'
 GROUP BY product_category, store_location, transaction_date, transaction_time
 ORDER BY revenue DESC;
 
-to visualise revenue per month, per store, per category
+--Query 8:to visualise revenue per month, per store, per category
 
 select transaction_date,
        year(transaction_date) AS Year,
