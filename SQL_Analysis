@@ -2,30 +2,30 @@ Columns for Bright Coffee Analysis transaction_id	transaction_date	transaction_t
 
 --Query 1: to show us name of different stores/locations
 select distinct store location, store_id
-from shopanalysis;
+from coffeeshop;
 
 --Query 2: to calculate the number of coffee shops
 select count(distict store_id) AS number_of_shops
-from shopanalysis;
+from coffeeshop;
 
 --Query 3: calculate revenue by store location
 select store_location,
      SUM(unit_price*transanction_qty) as revenue
-from shopanalysis
+from coffeeshop
 GROUP BY store_location;
 
 --Query 4: what time does the store open
 select min(transaction_time)  AS opening_time
-from shopanalysis;
+from coffeeshop;
 
 --Query 5: first date of transactions per store
 select min(transaction_date) AS first_day, store_location
-from shopanalysis
+from coffeeshop
 grou by store location
 
 --Query 6: what time does the store close
 select max(transaction_time) AS closing_time
-from shopanalysis;
+from coffeeshop;
 
 Query 7: to calculate revenue per product category at different times of the day
 
@@ -40,7 +40,7 @@ CASE
     When transaction_time between '16:00:00' AND '19:59:59' THEN 'Evening'
     When transaction_time>='20:00:00' THEN 'Night'
 END AS time_bucket
-FROM shopanalysis
+FROM coffeeshop
 WHERE transaction_date>'2023-05-01'
 GROUP BY product_category, store_location, transaction_date, transaction_time
 ORDER BY revenue DESC;
@@ -54,7 +54,7 @@ select transaction_date,
        dayname (transaction_date) AS day_name,
        store_location,
        sum(transaction_qty*unit_price) AS revenue
-from shopanalysis
+from coffeeshop
 group by all;
 
 
