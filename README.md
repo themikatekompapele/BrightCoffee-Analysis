@@ -8,7 +8,7 @@ The Coffee Shop Analysis Project provides a comprehensive and detailed analysis 
 
 ---
 
-## Project summary (one-liner)
+## Project summary
 Analyze Elohim Coffee Shop sales to identify top revenue drivers, peak times, customer purchasing behavior, and provide clear recommendations to increase revenue and optimize operations.
 
 ## Executive summary
