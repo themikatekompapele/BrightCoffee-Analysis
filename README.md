@@ -87,25 +87,14 @@ Analyze Elohim Coffee Shop sales to identify top revenue drivers, peak times, cu
 ---
 
 ## Data (recommended files)
-- data/sales_transactions.csv — (transaction_id, store, datetime, product_id, product_name, qty, price, total)
-- data/products.csv — (product_id, product_name, category, price, cost, sku)
-- data/stores.csv — (store_id, store_name, region, latitude, longitude)
-- dashboards/powerbi/Elohim_Coffee_Report.pbix
-- dashboards/tableau/Elohim_Coffee_Workbook.twbx
-- notebooks/analysis.ipynb — full exploratory analysis & figures
-- sql/queries.sql — reusable analytics queries
-- reports/figures/*.png — graphs and dashboard screenshots
+- data/Bright Coffee Shop Analysis - Transactions (1).csv — (transaction_id, store, datetime, product_id, product_name, qty, price, total)
 
 ---
 
 ## Methods & tools used / recommended
-- Data wrangling and analysis: SQL, Python (pandas)
-- BI & visualization: PowerBI, Tableau
+- Data wrangling and analysis: SQL
+- BI & visualization: PowerBI, Google Looker Studio
 - Spreadsheets: Excel (pivot analysis & quick-checks)
-- Optional: Forecasting — Prophet or ARIMA for demand forecasting
-- Environment recommendation:
-  - Python 3.9+
-  - requirements.txt: pandas, numpy, matplotlib, seaborn, jupyterlab
 
 ---
 
@@ -164,73 +153,6 @@ ORDER BY revenue DESC;
 - Interactive PowerBI / Tableau workbook files in `dashboards/`
 
 (Include dashboard screenshots in reports/figures/ and reference them here.)
-
----
-
-## How to reproduce (quick start)
-1. Clone repository
-   ```bash
-   git clone https://github.com/<owner>/<repo>.git
-   cd <repo>
-   ```
-2. Set up Python environment
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate   # macOS / Linux
-   .venv\Scripts\activate      # Windows
-   pip install -r requirements.txt
-   ```
-3. Place data files in `data/` (sales_transactions.csv, products.csv, stores.csv).
-4. Run notebooks:
-   ```bash
-   jupyter lab notebooks/analysis.ipynb
-   ```
-5. Open dashboards:
-   - PowerBI: open `dashboards/powerbi/Elohim_Coffee_Report.pbix`
-   - Tableau: open `dashboards/tableau/Elohim_Coffee_Workbook.twbx`
-
-Note: Any database connections (if used) require credentials. Use `.env` or secure vault for secrets.
-
----
-
-## Repository structure (suggested)
-- README.md
-- data/
-  - sales_transactions.csv
-  - products.csv
-  - stores.csv
-- notebooks/
-  - analysis.ipynb
-- sql/
-  - queries.sql
-- dashboards/
-  - powerbi/Elohim_Coffee_Report.pbix
-  - tableau/Elohim_Coffee_Workbook.twbx
-- reports/
-  - figures/
-- requirements.txt
-- LICENSE
-
----
-
-## Limitations & assumptions
-- Observations and recommendations are based on the aggregated summary you provided.
-- For precise numerical KPIs, figures and charts will be updated after ingesting the raw CSV/DB exports.
-- External factors (seasonality, promotions, weather) should be tested with additional datasets for causal inference.
-
----
-
-## Next steps (recommended)
-- Add raw data and dashboard screenshots to the repo so visual charts can be embedded.
-- Run controlled offers (A/B) for bundles and loyalty to estimate incremental lift.
-- Build a 4–6 week plan to implement loyalty & measure KPIs.
-
----
-
-## Contact
-Prepared by: themikatekompapele  
-Role: Data Analyst / Cloud Engineer (portfolio-ready project)  
-(Include LinkedIn / email here if you want it published)
 
 ---
 
