@@ -1,6 +1,6 @@
 # CoffeeShop-Analysis
 The Coffee Shop Analysis Project provides a comprehensive and detailed analysis of coffee shops set in three distinct locations, over the period of six months, from January to June 2023.
-# Elohim Coffee Shop — Sales Analysis & Recommendations ☕📊
+# Bright Coffee Shop — Sales Analysis & Recommendations ☕📊
 
 [![Project Status](https://img.shields.io/badge/status-completed-brightgreen?style=for-the-badge)](https://github.com/)
 [![Tools](https://img.shields.io/badge/Tools-SQL%20|%20PowerBI%20|%20Tableau%20|%20Excel-blue?style=for-the-badge)](https://github.com/)
